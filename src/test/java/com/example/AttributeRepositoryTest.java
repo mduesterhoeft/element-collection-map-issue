@@ -24,8 +24,6 @@ public class AttributeRepositoryTest {
     public void should_persist_attribute_with_same_value() {
         Attribute name = new Attribute("name");
 
-        name = attributeRepository.saveAndFlush(name);
-
         name.getAttributes().put(1, new AttributeValue("1"));
         name.getAttributes().put(2, new AttributeValue("2"));
 

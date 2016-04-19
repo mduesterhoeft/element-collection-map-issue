@@ -32,7 +32,10 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.springframework.boot:spring-boot-starter-data-rest')
+	compile('org.springframework.boot:spring-boot-starter-data-rest'){
+		exclude module: 'hibernate-entitymanager'
+	}
+	compile 'org.eclipse.persistence:org.eclipse.persistence.jpa:2.6.1'
 	compile('org.projectlombok:lombok')
 	runtime('com.h2database:h2')
 	testCompile('org.springframework.boot:spring-boot-starter-test') 

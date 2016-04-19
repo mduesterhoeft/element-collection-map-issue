@@ -1,19 +1,21 @@
 package com.example;
 
+import static lombok.AccessLevel.PRIVATE;
+
 import javax.persistence.Embeddable;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
 @Embeddable
 @RequiredArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@NoArgsConstructor(access = PRIVATE)
+@Data
 public class AttributeValue {
+
+    //private String id = UUID.randomUUID().toString();
 
     @NonNull
     private String name;
